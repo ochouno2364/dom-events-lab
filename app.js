@@ -16,10 +16,10 @@ const add = document.getElementById('#add');
  
 /*-------------------------------- Variables --------------------------------*/
 
-let firstOperand = 0;
-let secondOperand = 0;
-let operator = "";
-let result = 0;
+// let firstOperand = 0;
+// let numOne = 0;
+// let numTwo = ;
+// let result;
 
 
 /*------------------------ Cached Element References ------------------------*/
@@ -54,10 +54,13 @@ calculator.addEventListener('click', (event)=> {
   } else if (event.target.innerText === '/') {
     displayEl.textContent = displayEl.textContent + "/";
   } else if (event.target.innerText === '=') {
-    displayEl.textContent;
+    result();
   }
     });
 
 
-
+    function result() {
+      displayEl.textContent = eval(displayEl.textContent)
+    }
+    
 
