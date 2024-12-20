@@ -51,5 +51,8 @@ calculator.addEventListener('click', (event)=> {    // add event listener click 
     function result() {
       displayEl.textContent = eval(displayEl.textContent) // use the result function to evaluate everything in the display
     }
+
+    // Not sure if the eval() function is someting we can use but it made the code much cleaner and easier to understand to me. 
+    // I used alot of time trying other methods so if this isnt acceptable i will continue to try other ways
     
 
