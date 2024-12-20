@@ -16,51 +16,40 @@ const add = document.getElementById('#add');
  
 /*-------------------------------- Variables --------------------------------*/
 
-// let firstOperand = 0;
-// let numOne = 0;
-// let numTwo = ;
-// let result;
 
 
 /*------------------------ Cached Element References ------------------------*/
 
 /*----------------------------- Event Listeners -----------------------------*/
-// buttons.forEach((button)=> {
-//     button.addEventListener("click",()=> { 
-//         displayAnswerTextElement.append(button.innerText);
-//         calculator.update();
-        
-
-//     });
-// });
 
 
-calculator.addEventListener('click', (event)=> {    
-  if (event.target.classList.contains('number')) {
-    displayEl.textContent = displayEl.textContent + event.target.textContent;
+
+calculator.addEventListener('click', (event)=> {    // add event listener click to the entire calculator
+  if (event.target.classList.contains('number')) { // if it containes a number 
+    displayEl.textContent = displayEl.textContent + event.target.textContent; // show the number(s) in the display
     
     
   }
 
   // Example
-  if (event.target.innerText === 'C') {
+  if (event.target.innerText === 'C') { // if the string is C clear the display
     displayEl.textContent = "";
   } else if (event.target.innerText === '*') {
     displayEl.textContent = displayEl.textContent + "*";
   } else if (event.target.innerText === '+') {
-    displayEl.textContent = displayEl.textContent + "+";
+    displayEl.textContent = displayEl.textContent + "+"; // display each operator 
   } else if (event.target.innerText === '-') {
     displayEl.textContent = displayEl.textContent + "-";
   } else if (event.target.innerText === '/') {
     displayEl.textContent = displayEl.textContent + "/";
   } else if (event.target.innerText === '=') {
-    result();
+    result(); // call the result function
   }
     });
 
 
     function result() {
-      displayEl.textContent = eval(displayEl.textContent)
+      displayEl.textContent = eval(displayEl.textContent) // use the result function to evaluate everything in the display
     }
     
 
